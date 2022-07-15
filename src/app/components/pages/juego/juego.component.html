@@ -1,0 +1,12 @@
+<div class="game">
+    <app-display (gameFinished)="onGameFinished()" [guesses]="guesses" [question]="question"></app-display>
+    <ng-container *ngIf="!restartGameBtnShown else restartGameBtn">
+        <app-question [guesses]="guesses" [question]="question"></app-question>
+        <app-keyboard (keyPressed)="guess($event)" [question]="question"></app-keyboard>
+      </ng-container>
+</div>
+<ng-template #restartGameBtn>
+    <button class="btn" (click)="reset()">
+      {{'Volver a jugar'}}
+    </button>
+  </ng-template>
