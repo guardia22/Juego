@@ -18,7 +18,7 @@ export class DisplayComponent implements OnInit, OnChanges {
   @Input() guesses: string[] = [];
   @Input() question: string = '';
   @Output() gameFinished = new EventEmitter<boolean>();
-  MAX_MISTAKES = 5;
+  MAX_MISTAKES = 7;
   mistakesRemaining;
   success: boolean = false;
 

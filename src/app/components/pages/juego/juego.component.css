@@ -4,6 +4,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .question-title{
+    font-weight: bold;
+  }
   .btn{
     background-color: cadetblue;
   }
